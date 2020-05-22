@@ -24,7 +24,7 @@ public class Home extends AppCompatActivity
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super .onCreate(savedInstanceState) ;
-        setContentView(R.layout. activity_main ) ;
+        setContentView(R.layout.home);
         new_patient=findViewById(R.id.register_btn);
         old_patient=findViewById(R.id.cam_btn);
         new_patient.setOnClickListener(new View.OnClickListener() {
