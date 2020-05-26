@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -20,29 +21,13 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button new_patient,old_patient;
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super .onCreate(savedInstanceState) ;
         setContentView(R.layout.home);
-        new_patient=findViewById(R.id.register_btn);
-        old_patient=findViewById(R.id.cam_btn);
-        new_patient.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Home.this,Register_fragment.class);
-                startActivity(intent);
-
-            }
-        });
-        old_patient.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Home.this,Verify_fragment.class);
-                startActivity(intent);
-
-            }
-        });
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frag_container,new fronthome());
+        fragmentTransaction.commit();
         Toolbar toolbar = findViewById(R.id. toolbar_main ) ;
         setSupportActionBar(toolbar) ;
 
@@ -76,10 +61,18 @@ public class Home extends AppCompatActivity
     public boolean onNavigationItemSelected ( @NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId() ;
-        if (id == R.id. nav_register ) {
+        if (id == R.id. nav_home ) {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frag_container,new fronthome());
+            fragmentTransaction.commit();
 
         } else if (id == R.id. nav_oldregister ) {
         } else if (id == R.id. nav_setting ) {
+        }
+        else if(id == R.id.nav_logout)
+        {
+            Intent intent=new Intent(Home.this,Login_Activity.class);
+            startActivity(intent);
         }
         DrawerLayout drawer = findViewById(R.id. drawer_layout ) ;
         drawer.closeDrawer(GravityCompat. START ) ;

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Activity">
+
+
+
+    <TextView
+        android:id="@+id/Reg_scrn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="60dp"
+        android:text="Registration"
+        android:textColor="@color/color_midblue"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TUser_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Reg_scrn"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="User_Id"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/User_id"
+        android:layout_below="@id/Reg_scrn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:hint="123"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/TUsername_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TUser_id"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="User_name"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Username_input"
+        android:layout_below="@id/TUser_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:hint="john"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/TUserPassword_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TUsername_input"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Password"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/UserPassword_input"
+        android:layout_below="@id/TUsername_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:singleLine="true"
+        android:hint="123@"
+        android:inputType="textPassword"/>
+    <TextView
+        android:id="@+id/TUseremail_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TUserPassword_input"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="E-mail"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Useremail_input"
+        android:layout_below="@id/TUserPassword_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:singleLine="true"
+        android:hint="john@gmail.com"
+        android:inputType="textEmailAddress"/>
+    <TextView
+        android:id="@+id/TUserphone_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TUseremail_input"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Phone No."
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Userphone_input"
+        android:layout_below="@id/TUseremail_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:singleLine="true"
+        android:hint="92200000"
+        android:inputType="phone"/>
+
+    <TextView
+        android:id="@+id/TUsercity_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TUserphone_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="City"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Usercity_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TUsercity_input"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="-18dp"
+        android:layout_marginRight="20dp"
+        android:hint="jaipur"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/Register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TUsercity_input"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/buttons"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:text="Register"
+        android:textColor="@color/color_midblue"/>
+
+
+</RelativeLayout>
