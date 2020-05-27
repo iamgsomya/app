@@ -140,15 +140,39 @@
         android:text="City"
         android:textColor="#372c24" />
 
+
     <EditText
         android:id="@+id/Usercity_input"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/TUsercity_input"
+        android:layout_below="@id/TUserphone_input"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="-18dp"
+        android:layout_marginTop="21dp"
         android:layout_marginRight="20dp"
         android:hint="jaipur"
+        android:inputType="text"
+        android:singleLine="true" />
+
+
+    <TextView
+        android:id="@+id/TUserstate_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TUsercity_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="39dp"
+        android:text="State"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Userstate_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TUsercity_input"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="20dp"
+        android:hint="Madhya Pradesh"
         android:inputType="text"
         android:singleLine="true" />
 
@@ -156,7 +180,7 @@
         android:id="@+id/Register_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/TUsercity_input"
+        android:layout_below="@id/TUserstate_input"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="120dp"
         android:layout_marginRight="30dp"

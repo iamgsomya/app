@@ -2,11 +2,13 @@ package org.docreg.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -21,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register_Activity extends AppCompatActivity {
-    private EditText  InputId,InputUsername,InputPassword,InputEmail,InputPhone,InputCity;
+    private EditText  InputId,InputUsername,InputPassword,InputEmail,InputPhone,InputCity,InputState;
     private Button RegisterButton;
     RequestQueue queue;
 
@@ -34,6 +36,7 @@ public class Register_Activity extends AppCompatActivity {
         InputUsername=findViewById(R.id.Username_input);
         InputPassword=findViewById(R.id.UserPassword_input);
         InputEmail=findViewById(R.id.Useremail_input);
+        InputState=findViewById(R.id.Userstate_input);
 
 
 
@@ -45,7 +48,7 @@ public class Register_Activity extends AppCompatActivity {
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 String url = "https://ep2.virtualmist.com/phpmyadmin/register-new-user";
+                 String url = "https://ep2.virtualmist.com/register-new-user";
                 StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>()
                         {
@@ -57,6 +60,27 @@ public class Register_Activity extends AppCompatActivity {
                                   String code=jsonObject.getString("code");
                                   String message=jsonObject.getString("message");
                                   System.out.println("code"+code+"\nmessage:"+message);
+                                  if(message.equals("user_created")) {
+                                      Toast toast = Toast.makeText(getApplicationContext(),
+                                              "User  created",
+                                              Toast.LENGTH_SHORT);
+
+                                      toast.show();
+
+                                      Intent intent = new Intent(Register_Activity.this, Login_Activity.class);
+                                      startActivity(intent);
+                                  }
+                                  else
+                                  {
+                                      Toast toast = Toast.makeText(getApplicationContext(),
+                                              "User not created",
+                                              Toast.LENGTH_SHORT);
+
+                                      toast.show();
+                                      Intent intent = new Intent(Register_Activity.this, MainActivity.class);
+                                      startActivity(intent);
+
+                                  }
 
                               }
                               catch (Exception e){
@@ -84,6 +108,7 @@ public class Register_Activity extends AppCompatActivity {
                         params.put("email", InputEmail.getText().toString());
                         params.put("phone", InputPhone.getText().toString());
                         params.put("city", InputCity.getText().toString());
+                        params.put("state", InputState.getText().toString());
 
 
                         return params;
