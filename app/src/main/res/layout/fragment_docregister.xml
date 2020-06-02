@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".docregister">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/Reg_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="60dp"
+        android:text="Registration"
+        android:textColor="@color/color_midblue"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Tdoc_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Reg_screen"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Doc_Id"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Doc_id"
+        android:layout_below="@id/Reg_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:hint="123"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/TDocname_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Tdoc_id"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Doctor_name"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Docname_input"
+        android:layout_below="@id/Tdoc_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:hint="john"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/TDoc_adhaar_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TDocname_input"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Adhaar.no"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Doc_adhaar_input"
+        android:layout_below="@id/TDocname_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:singleLine="true"
+        android:hint="1233432"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/TLocation_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TDoc_adhaar_input"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Location"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Location_input"
+        android:layout_below="@id/TDoc_adhaar_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:singleLine="true"
+        android:hint="block c,jda "
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/T_spec_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TLocation_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Specialization"
+        android:textColor="#372c24" />
+
+
+    <EditText
+        android:id="@+id/Spec_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TLocation_input"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="20dp"
+        android:hint="Surgeon"
+        android:inputType="text"
+        android:singleLine="true" />
+
+
+    <TextView
+        android:id="@+id/TBio_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T_spec_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="39dp"
+        android:text="Bio"
+        android:textColor="#372c24" />
+
+    <EditText
+        android:id="@+id/Bio_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/T_spec_input"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="20dp"
+        android:hint="sadhjd"
+        android:inputType="text"
+        android:singleLine="true" />
+        <TextView
+            android:id="@+id/TRating_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TBio_input"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:text="Rating"
+            android:textColor="#372c24" />
+
+        <EditText
+            android:id="@+id/Rating_input"
+            android:layout_below="@id/TBio_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:singleLine="true"
+            android:hint="out of 5"
+            android:inputType="number"/>
+        <TextView
+            android:id="@+id/TDocemail_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TRating_input"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:text="E-mail"
+            android:textColor="#372c24" />
+
+        <EditText
+            android:id="@+id/Docemail_input"
+            android:layout_below="@id/TRating_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:singleLine="true"
+            android:hint="john@gmail.com"
+            android:inputType="textEmailAddress"/>
+        <TextView
+            android:id="@+id/TDocphone_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TDocemail_input"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:text="Phone No."
+            android:textColor="#372c24" />
+
+        <EditText
+            android:id="@+id/Docphone_input"
+            android:layout_below="@id/TDocemail_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:singleLine="true"
+            android:hint="92200000"
+            android:inputType="phone"/>
+        <TextView
+            android:id="@+id/Tclinc_name_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TDocphone_input"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:text="Clinc Name"
+            android:textColor="#372c24" />
+
+        <EditText
+            android:id="@+id/clinic_name_input"
+            android:layout_below="@id/TDocphone_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:singleLine="true"
+            android:hint="clinc_name"
+            android:inputType="text"/>
+
+
+
+    <Button
+        android:id="@+id/Doc_Register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Tclinc_name_input"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/buttons"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:text="Register"
+        android:textColor="@color/color_midblue"/>
+    </RelativeLayout>
+</ScrollView>
+
+</FrameLayout>

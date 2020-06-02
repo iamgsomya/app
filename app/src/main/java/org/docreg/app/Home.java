@@ -66,7 +66,10 @@ public class Home extends AppCompatActivity
             fragmentTransaction.replace(R.id.frag_container,new fronthome());
             fragmentTransaction.commit();
 
-        } else if (id == R.id. nav_oldregister ) {
+        } else if (id == R.id. nav_docregister ) {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frag_container,new docregister());
+            fragmentTransaction.commit();
         } else if (id == R.id. nav_setting ) {
         }
         else if(id == R.id.nav_logout)
