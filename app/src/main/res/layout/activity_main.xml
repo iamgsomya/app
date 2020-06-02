@@ -60,7 +60,4 @@
         android:text="Join Now"
         android:textStyle="bold"
         android:textColor="@color/color_midblue"/>
-
-
-
 </RelativeLayout>
