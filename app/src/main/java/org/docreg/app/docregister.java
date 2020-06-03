@@ -26,7 +26,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-class docregister extends Fragment {
+public class docregister extends Fragment {
     private EditText InputdocId,Inputdocname,Inputadhaar,Inputloc,Inputspec,Inputbio,Inputrating,Inputdocemail,Inputdocphone,Inputclinicname;
     private Button RegisterButton;
     RequestQueue queue;
@@ -43,8 +43,100 @@ class docregister extends Fragment {
         Inputdocphone=view.findViewById(R.id.Docphone_input);
         Inputclinicname=view.findViewById(R.id.clinic_name_input);
 
-        RegisterButton=view.findViewById(R.id.Register_btn);
-         return view;
+        RegisterButton=view.findViewById(R.id.Doc_Register_btn);
+        queue = Volley.newRequestQueue(getContext());
+        RegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String url = "https://ep2.virtualmist.com/register-doctor";
+                StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                        new Response.Listener<String>()
+                        {
+                            @Override
+                            public void onResponse(String response) {
+                                // response
+                                try{
+                                    JSONObject jsonObject=new JSONObject(response);
+                                    String code=jsonObject.getString("code");
+                                    String message=jsonObject.getString("message");
+                                    System.out.println("code"+code+"\nmessage:"+message);
+                                    if(code == "200") {
+                                        Toast toast = Toast.makeText(getContext(),
+                                                "doc registered",
+                                                Toast.LENGTH_SHORT);
+
+                                        toast.show();
+
+                                        Intent intent = new Intent(getContext(), fronthome.class);
+                                        startActivity(intent);
+                                    }
+                                    else if(code == "300") {
+                                        Toast toast = Toast.makeText(getContext(),
+                                                "already registered",
+                                                Toast.LENGTH_SHORT);
+
+                                        toast.show();
+
+                                        Intent intent = new Intent(getContext(), fronthome.class);
+                                        startActivity(intent);
+                                    }
+                                    else
+                                    {
+                                        Toast toast = Toast.makeText(getContext(),
+                                                "doc not registered",
+                                                Toast.LENGTH_SHORT);
+
+                                        toast.show();
+                                        Intent intent = new Intent(getContext(), fronthome.class);
+                                        startActivity(intent);
+
+                                    }
+
+                                }
+                                catch (Exception e){
+                                    System.out.println("exception caught");
+
+                                }
+                            }
+                        },
+                        new Response.ErrorListener()
+                        {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+
+                                Log.d("Error.Response", error.toString());
+                            }
+                        }
+                ) {
+                    @Override
+                    protected Map<String, String> getParams()
+                    {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("auth", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidXNlcjIiLCJleHAiOjE1OTExMjQzNTl9.5M9bSyH-QAiyKm0BIp8ZQ7mivMLye_kk_vXyAQR9NI8");
+                        params.put("id", InputdocId.getText().toString());
+                        params.put("name", Inputdocname.getText().toString());
+                        params.put("aadhaar_no",Inputadhaar.getText().toString() );
+                        params.put("clinic_location", Inputloc.getText().toString());
+                        params.put("specialization", Inputspec.getText().toString());
+                        params.put("bio", Inputbio.getText().toString());
+                        params.put("rating", Inputrating.getText().toString());
+                        params.put("email",Inputdocemail .getText().toString());
+                        params.put("phone", Inputdocphone.getText().toString());
+                        params.put("clinic_name",Inputclinicname.getText().toString() );
+
+
+                        return params;
+                    }
+                };
+                queue.add(postRequest);
+
+
+
+            }
+        });
+        return view;
+
 
     }
 }

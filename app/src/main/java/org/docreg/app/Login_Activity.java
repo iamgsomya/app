@@ -64,6 +64,7 @@ public class Login_Activity extends AppCompatActivity {
 
                                         toast.show();
 
+
                                         Intent intent = new Intent(Login_Activity.this, Home.class);
                                         startActivity(intent);
                                     }
@@ -103,14 +104,13 @@ public class Login_Activity extends AppCompatActivity {
                     protected Map<String, String> getParams()
                     {
                         Map<String, String> params = new HashMap<String, String>();
-                        //passing parameters
                         params.put("userId", InputUsername.getText().toString());
                         params.put("password", InputPassword.getText().toString());
                         return params;
                     }
                 };
                 queue.add(postRequest);
-                loginUser();
+               loginUser();
 
             }
         });
