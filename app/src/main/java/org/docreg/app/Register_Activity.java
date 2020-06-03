@@ -60,7 +60,7 @@ public class Register_Activity extends AppCompatActivity {
                                   String code=jsonObject.getString("code");
                                   String message=jsonObject.getString("message");
                                   System.out.println("code"+code+"\nmessage:"+message);
-                                  if(message.equals("user_created")) {
+                                  if(code == "200") {
                                       Toast toast = Toast.makeText(getApplicationContext(),
                                               "User  created",
                                               Toast.LENGTH_SHORT);
