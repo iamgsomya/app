@@ -30,8 +30,6 @@ public class fronthome extends Fragment {
                 startActivity(intent);
 
 
-
-
             }
         });
         new_paitent.setOnClickListener(new View.OnClickListener() {

@@ -54,13 +54,13 @@ public class Register_Activity extends AppCompatActivity {
                         {
                             @Override
                             public void onResponse(String response) {
-                                // response
                               try{
+                                  Log.i("response", response);
                                   JSONObject jsonObject=new JSONObject(response);
-                                  String code=jsonObject.getString("code");
+                                  int code=jsonObject.getInt("code");
                                   String message=jsonObject.getString("message");
                                   System.out.println("code"+code+"\nmessage:"+message);
-                                  if(code == "200") {
+                                  if(code == 200) {
                                       Toast toast = Toast.makeText(getApplicationContext(),
                                               "User  created",
                                               Toast.LENGTH_SHORT);

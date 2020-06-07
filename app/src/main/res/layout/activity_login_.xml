@@ -15,7 +15,7 @@
         android:layout_marginTop="200dp"
         />
     <EditText
-        android:id="@+id/login_username_input"
+        android:id="@+id/login_userid_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_applogo"
@@ -23,7 +23,7 @@
         android:padding="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:hint="Username"
+        android:hint="User_id"
         android:inputType="text"
         android:textColor="@color/color_midblue"
         android:textColorHint="@color/color_midblue"
@@ -34,7 +34,7 @@
         android:id="@+id/login_password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_username_input"
+        android:layout_below="@+id/login_userid_input"
         android:background="@drawable/inputs"
         android:padding="20dp"
         android:layout_marginLeft="30dp"

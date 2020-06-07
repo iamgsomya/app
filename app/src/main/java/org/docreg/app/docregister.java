@@ -58,10 +58,10 @@ public class docregister extends Fragment {
                                 // response
                                 try{
                                     JSONObject jsonObject=new JSONObject(response);
-                                    String code=jsonObject.getString("code");
+                                    int code=jsonObject.getInt("code");
                                     String message=jsonObject.getString("message");
                                     System.out.println("code"+code+"\nmessage:"+message);
-                                    if(code == "200") {
+                                    if(code == 200) {
                                         Toast toast = Toast.makeText(getContext(),
                                                 "doc registered",
                                                 Toast.LENGTH_SHORT);
@@ -71,7 +71,7 @@ public class docregister extends Fragment {
                                         Intent intent = new Intent(getContext(), fronthome.class);
                                         startActivity(intent);
                                     }
-                                    else if(code == "300") {
+                                    else if(code == 300) {
                                         Toast toast = Toast.makeText(getContext(),
                                                 "already registered",
                                                 Toast.LENGTH_SHORT);
@@ -113,7 +113,7 @@ public class docregister extends Fragment {
                     protected Map<String, String> getParams()
                     {
                         Map<String, String> params = new HashMap<String, String>();
-                        params.put("auth", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidXNlcjIiLCJleHAiOjE1OTExMjQzNTl9.5M9bSyH-QAiyKm0BIp8ZQ7mivMLye_kk_vXyAQR9NI8");
+                        params.put("auth", Constants.authToken);
                         params.put("id", InputdocId.getText().toString());
                         params.put("name", Inputdocname.getText().toString());
                         params.put("aadhaar_no",Inputadhaar.getText().toString() );
