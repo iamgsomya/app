@@ -25,9 +25,7 @@ public class Home extends AppCompatActivity
     protected void onCreate (Bundle savedInstanceState) {
         super .onCreate(savedInstanceState) ;
         setContentView(R.layout.home);
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frag_container,new fronthome());
-        fragmentTransaction.commit();
+
         Toolbar toolbar = findViewById(R.id. toolbar_main ) ;
         setSupportActionBar(toolbar) ;
 
@@ -39,6 +37,9 @@ public class Home extends AppCompatActivity
         toggle.syncState() ;
         NavigationView navigationView = findViewById(R.id. nav_view ) ;
         navigationView.setNavigationItemSelectedListener( this ) ;
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frag_container,new fronthome());
+        fragmentTransaction.commit();
     }
     @Override
     public void onBackPressed () {

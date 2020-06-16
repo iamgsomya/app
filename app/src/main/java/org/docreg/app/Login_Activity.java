@@ -97,23 +97,22 @@ public class Login_Activity extends AppCompatActivity {
                     }
                 };
                 queue.add(postRequest);
-//                loginUser();
+               loginUser();
 
             }
         });
     }
 
-//    private void loginUser() {
-//
-//        String username = InputUsername.getText().toString();
-//        String password = InputPassword.getText().toString();
-//        if (TextUtils.isEmpty(username)) {
-//            Toast.makeText(this, "please write your Username", Toast.LENGTH_SHORT).show();
-//        } else if (TextUtils.isEmpty(password)) {
-//            Toast.makeText(this, "please write your password", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Intent intent = new Intent(Login_Activity.this, Home.class);
-//            startActivity(intent);
-//        }
-//    }
+    private void loginUser() {
+    String username = InputUserid.getText().toString();
+      String password = InputPassword.getText().toString();
+       if (TextUtils.isEmpty(username)) {
+           Toast.makeText(this, "please write your Username", Toast.LENGTH_SHORT).show();
+      } else if (TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "please write your password", Toast.LENGTH_SHORT).show();
+       } else {
+      Intent intent = new Intent(Login_Activity.this, Home.class);
+          startActivity(intent);
+     }
+    }
 }

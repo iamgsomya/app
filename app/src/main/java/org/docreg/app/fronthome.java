@@ -18,31 +18,20 @@ import android.widget.Button;
 
 
 public class fronthome extends Fragment {
- Button old_paitent,new_paitent;
+ Button reg_paitent;
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fronthome, container, false);
-        old_paitent=view.findViewById(R.id.register_btn);
-        new_paitent=view.findViewById(R.id.new_register_btn);
-        old_paitent.setOnClickListener(new View.OnClickListener() {
+        reg_paitent=view.findViewById(R.id.paitent_register_btn);
+        reg_paitent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getContext(),Old_register.class);
+                Intent intent=new Intent(getContext(),patient_register.class);
                 startActivity(intent);
 
 
             }
         });
-        new_paitent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getContext(),New_register.class);
-                startActivity(intent);
 
-
-
-
-            }
-        });
     return view;
     }
 

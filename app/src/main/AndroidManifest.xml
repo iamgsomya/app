@@ -11,8 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Register_Activity"></activity>
-        <activity android:name=".Old_register" />
-        <activity android:name=".New_register" />
         <activity android:name=".Login_Activity" />
         <activity
             android:name=".MainActivity"
