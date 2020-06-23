@@ -96,6 +96,8 @@ public class ImageCaptureScreen extends AppCompatActivity {
                 captureImage.setImageBitmap(imageData);
                 captureImage.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.GONE);
+            Intent intent = new Intent(ImageCaptureScreen.this, patient_reg.class);
+            startActivity(intent);
 
             } else if (resultCode == RESULT_CANCELED){
                 progressBar.setVisibility(View.GONE);

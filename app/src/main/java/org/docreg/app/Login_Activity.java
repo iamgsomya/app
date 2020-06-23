@@ -28,6 +28,7 @@ public class Login_Activity extends AppCompatActivity {
     private EditText InputUserid, InputPassword;
     private Button LoginButton;
     RequestQueue queue;
+    Auth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class Login_Activity extends AppCompatActivity {
         LoginButton = findViewById(R.id.login_btn);
         InputUserid = findViewById(R.id.login_userid_input);
         InputPassword = findViewById(R.id.login_password_input);
+        auth = new Auth(this);
 
         queue = Volley.newRequestQueue(this);
 
@@ -53,12 +55,13 @@ public class Login_Activity extends AppCompatActivity {
                                     int code = obj.getInt("code");
                                     String message = obj.getString("message");
                                     System.out.println("code" + code + "\nmessage:" + message);
-                                    if (code ==200 ){
-                                        Constants.authToken = obj.getString("token");
+                                    if (code ==200){
+                                        //Constants.authToken = obj.getString("token");
+                                        auth.setToken(obj.getString("token"));
+//                                        auth.setUserId(obj.getString("UserId"));
                                         Toast toast = Toast.makeText(getApplicationContext(),
                                                 "Login Successful",
                                                 Toast.LENGTH_SHORT);
-
                                         toast.show();
                                         Intent intent = new Intent(Login_Activity.this, Home.class);
                                         startActivity(intent);

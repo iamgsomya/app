@@ -30,6 +30,7 @@ public class docregister extends Fragment {
     private EditText InputdocId,Inputdocname,Inputadhaar,Inputloc,Inputspec,Inputbio,Inputrating,Inputdocemail,Inputdocphone,Inputclinicname;
     private Button RegisterButton;
     RequestQueue queue;
+    Auth auth;
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_docregister, container, false);
         InputdocId=view.findViewById(R.id.Doc_id);
@@ -45,6 +46,7 @@ public class docregister extends Fragment {
 
         RegisterButton=view.findViewById(R.id.Doc_Register_btn);
         queue = Volley.newRequestQueue(getContext());
+        auth = new Auth(getContext());
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +115,7 @@ public class docregister extends Fragment {
                     protected Map<String, String> getParams()
                     {
                         Map<String, String> params = new HashMap<String, String>();
-                        params.put("auth", Constants.authToken);
+                        params.put("auth", auth.getToken());
                         params.put("id", InputdocId.getText().toString());
                         params.put("name", Inputdocname.getText().toString());
                         params.put("aadhaar_no",Inputadhaar.getText().toString() );

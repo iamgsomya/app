@@ -29,7 +29,6 @@ import static android.app.Activity.RESULT_OK;
 
 public class fronthome extends Fragment {
  Button reg_paitent;
-    private static final int CAMERA_PIC_REQUEST = 1337;
 
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fronthome, container, false);
@@ -38,8 +37,6 @@ public class fronthome extends Fragment {
             @Override
             public void onClick(View view) {
 
-//                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                startActivityForResult(takePictureIntent, CAMERA_PIC_REQUEST);
         Intent i = new Intent(getContext(), ImageCaptureScreen.class);
         startActivity(i);
             }
@@ -48,32 +45,7 @@ public class fronthome extends Fragment {
         return view;
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == CAMERA_PIC_REQUEST) {
-//            if (resultCode == RESULT_OK) {
-//                Bitmap imageData = (Bitmap) data.getExtras().get("data");
-//
-////                ImageView image = (ImageView) findViewById(R.id.imageView1);
-////                image.setImageBitmap(imageData);
-//            } else if (resultCode == RESULT_CANCELED){
-////                tv.setText("Cancelled");
-//            }
-//        }
-//    }
-    //     void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (requestCode == CAMERA_PIC_REQUEST) {
-//            if (resultCode == RESULT_OK) {
-//                tv.setText("Got picture!");
-//                imageData = (Bitmap) data.getExtras().get("data");
-//                ImageView image = (ImageView) findViewById(R.id.imageView1);
-//                image.setImageBitmap(imageData);
-//            } else if (resultCode == RESULT_CANCELED){
-//                tv.setText("Cancelled");
-//            }
-//        }
-//    }
+
 
 
 }
