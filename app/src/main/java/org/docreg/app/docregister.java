@@ -51,7 +51,7 @@ public class docregister extends Fragment {
             @Override
             public void onClick(View view) {
 
-                String url = "https://ep2.virtualmist.com/register-doctor";
+                String url = Constants.docRegisterUrl;
                 StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>()
                         {

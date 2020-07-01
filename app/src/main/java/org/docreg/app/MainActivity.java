@@ -15,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Auth auth = new Auth(this);
+        if (auth.getToken()!=null){
+            Intent i = new Intent(this, Home.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
+        }
         joinNowButton=findViewById(R.id.join_now);
         loginButton=findViewById(R.id.main_login);
         loginButton.setOnClickListener(new View.OnClickListener() {

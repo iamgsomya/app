@@ -75,6 +75,8 @@ public class Home extends AppCompatActivity
         }
         else if(id == R.id.nav_logout)
         {
+            Auth auth = new Auth(this);
+            auth.removeUser();
             Intent intent=new Intent(Home.this,Login_Activity.class);
             startActivity(intent);
         }

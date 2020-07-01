@@ -44,7 +44,7 @@ public class Login_Activity extends AppCompatActivity {
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://ep2.virtualmist.com/user-login";
+                String url = Constants.loginUrl;
                 StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
@@ -58,12 +58,19 @@ public class Login_Activity extends AppCompatActivity {
                                     if (code ==200){
                                         //Constants.authToken = obj.getString("token");
                                         auth.setToken(obj.getString("token"));
-//                                        auth.setUserId(obj.getString("UserId"));
+                                        auth.setUserId(obj.getString("user_id"));
+                                        auth.setTokenExp(obj.getString("token_expiry"));
+                                        auth.setName(obj.getString("name"));
+                                        auth.setEmail(obj.getString("email"));
+                                        auth.setPhone(obj.getString("phone"));
+                                        auth.setCity(obj.getString("city"));
+                                        auth.setState(obj.getString("state"));
                                         Toast toast = Toast.makeText(getApplicationContext(),
                                                 "Login Successful",
                                                 Toast.LENGTH_SHORT);
                                         toast.show();
                                         Intent intent = new Intent(Login_Activity.this, Home.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
                                     } else {
                                         Toast toast = Toast.makeText(getApplicationContext(),
@@ -71,13 +78,13 @@ public class Login_Activity extends AppCompatActivity {
                                                 Toast.LENGTH_SHORT);
 
                                         toast.show();
-                                        Intent intent = new Intent(Login_Activity.this, MainActivity.class);
-                                        startActivity(intent);
+//
 
                                     }
 
                                 } catch (Exception e) {
-                                    System.out.println("Exception caught");
+                                    Toast.makeText(Login_Activity.this, "Something went wrong (0xc0000432B)", Toast.LENGTH_SHORT).show();
+                                    e.printStackTrace();
                                 }
 
                                 Log.d("Response", response);
@@ -88,6 +95,8 @@ public class Login_Activity extends AppCompatActivity {
                             public void onErrorResponse(VolleyError error) {
                                 // error
                                 Log.d("Error.Response", error.toString());
+                                Toast.makeText(Login_Activity.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
+                                error.printStackTrace();
                             }
                         }
                 ) {
@@ -100,7 +109,7 @@ public class Login_Activity extends AppCompatActivity {
                     }
                 };
                 queue.add(postRequest);
-               loginUser();
+//                loginUser();
 
             }
         });

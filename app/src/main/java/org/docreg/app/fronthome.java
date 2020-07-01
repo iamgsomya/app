@@ -29,15 +29,22 @@ import static android.app.Activity.RESULT_OK;
 
 public class fronthome extends Fragment {
  Button reg_paitent;
+ Button fetch_patient;
 
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fronthome, container, false);
+        fetch_patient = view.findViewById(R.id.fetchpatient);
+        fetch_patient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
         reg_paitent = view.findViewById(R.id.paitent_register_btn);
         reg_paitent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-        Intent i = new Intent(getContext(), ImageCaptureScreen.class);
+        Intent i = new Intent(getContext(), patient_reg.class);
         startActivity(i);
             }
         });

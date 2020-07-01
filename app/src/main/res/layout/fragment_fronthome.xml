@@ -9,19 +9,27 @@
 
 
     <Button
-
         android:id="@+id/paitent_register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="270dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="410dp"
         android:background="@drawable/buttons"
         android:padding="15dp"
         android:text="Patient Registration"
         android:textColor="@color/color_midblue"
         android:textSize="18sp" />
-
-
+    <Button
+        android:id="@+id/fetchpatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/buttons"
+        android:padding="15dp"
+        android:text="Fetch Patient"
+        android:textColor="@color/color_midblue"
+        android:textSize="18sp" />
 </LinearLayout>
