@@ -5,6 +5,42 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">email</string>
+    <string name="password" />
+    <string name="doctor_registration">Doctor Registration</string>
+    <string name="doctor_name">Doctor_name</string>
+    <string name="_92200000">92200000</string>
+    <string name="doc_123">doc_123</string>
+    <string name="clinc_name">clinc_name</string>
+    <string name="block_c_jda">Block C, JDA</string>
+    <string name="doc_id">Doc_Id</string>
+    <string name="specialization">Specialization</string>
+    <string name="john_marques">John Marques</string>
+    <string name="register">Register</string>
+    <string name="location">Location</string>
+    <string name="e_mail">E-mail</string>
+    <string name="out_of_5">out of 5</string>
+    <string name="_1233432">1233432</string>
+    <string name="surgeon">Surgeon</string>
+    <string name="adhaar_no">Adhaar.no</string>
+    <string name="rating">Rating</string>
+    <string name="bio">Bio</string>
+    <string name="john_gmail_com">john@gmail.com</string>
+    <string name="sadhjd">sadhjd</string>
+    <string name="clincname">Clinc Name</string>
+    <string name="patient_registration">Patient Registration</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="registration">Registration</string>
+    <string name="user_id">User_Id</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="madhya_pradesh">Madhya Pradesh</string>
+    <string name="_123">123@</string>
+    <string name="jaipur">jaipur</string>
+    <string name="john123">john123</string>
+    <string name="pass">Password</string>
+    <string name="user_name">User_name</string>
     <string-array name="gender">
         <item>female</item>
         <item>male</item>

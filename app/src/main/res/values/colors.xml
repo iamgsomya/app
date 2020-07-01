@@ -5,5 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="color_blue">#98AFC7</color>
     <color name="color_midblue">#151B54</color>
+    <color name="color_head">#30336b</color>
+    <color name="color_skyblue">#22a6b3</color>
+
 
 </resources>
