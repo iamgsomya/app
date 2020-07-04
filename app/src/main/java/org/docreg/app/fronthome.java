@@ -37,7 +37,8 @@ public class fronthome extends Fragment {
         fetch_patient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent i = new Intent(getContext(), FetchPatientScreen.class);
+                startActivity(i);
             }
         });
         reg_paitent = view.findViewById(R.id.paitent_register_btn);

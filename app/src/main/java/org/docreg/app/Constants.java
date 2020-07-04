@@ -6,4 +6,6 @@ public class Constants {
     static String loginUrl = prefix + "/user-login";
     static String registerPatientUrl = prefix + "/register-patient";
     static String docRegisterUrl = prefix + "/register-doctor";
+    static String fetchPatientsUrl = prefix + "/recognize-patient";
+
 }

@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FetchPatientScreen">
+    <androidx.appcompat.widget.Toolbar
+        app:titleTextColor="@android:color/white"
+        android:id="@+id/fpsToolbar"
+        android:layout_width="match_parent"
+        android:logo="@drawable/ic_baseline_arrow_back_24"
+        app:titleMarginStart="20sp"
+        android:layout_height="wrap_content"
+        app:title="Matches"
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        />
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:visibility="gone"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:padding="20dp"
+            android:layout_gravity="center_vertical"
+            style="@style/TextAppearance.AppCompat.Subhead"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/fps_nomatchfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:textColor="#6E1D1D"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_baseline_error_outline_24"
+        android:text=" No Match found"/>
+    <TextView
+        android:id="@+id/fps_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="#6E1D1D"
+        android:drawableStart="@drawable/ic_baseline_error_outline_24"
+        android:text=" Sorry Something went wrong"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/patient_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:verticalScrollbarPosition="right"
+        tools:listitem="@layout/patient_card_layout"
+        android:padding="10dp"
+        android:layout_weight="1"/>
+
+
+
+</LinearLayout>
