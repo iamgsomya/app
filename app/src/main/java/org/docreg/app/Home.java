@@ -80,6 +80,12 @@ public class Home extends AppCompatActivity
             Intent intent=new Intent(Home.this,Login_Activity.class);
             startActivity(intent);
         }
+        else if(id == R.id.nav_about)
+        {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frag_container,new about_frag());
+            fragmentTransaction.commit();
+        }
         DrawerLayout drawer = findViewById(R.id. drawer_layout ) ;
         drawer.closeDrawer(GravityCompat. START ) ;
         return true;
