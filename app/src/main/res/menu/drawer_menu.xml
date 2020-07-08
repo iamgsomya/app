@@ -4,27 +4,16 @@
         <item android:id="@+id/nav_home"
                 android:icon="@drawable/home_black_24dp"
                 android:title="Home"/>
-
-        <item android:id="@+id/nav_register"
-            android:icon="@drawable/register_24dp"
-            android:title="Register"/>
-        <item android:id="@+id/nav_report"
-            android:icon="@drawable/document_24dp"
-            android:title="report"/>
         <item android:id="@+id/nav_docregister"
             android:icon="@drawable/register_24dp"
-            android:title="new_doc"/>
+            android:title="Doctor Registration"/>
         <item android:id="@+id/nav_setting"
             android:icon="@drawable/settings_black_24dp"
-            android:title="setting"/>
+            android:title="Settings"/>
         <item android:id="@+id/nav_about"
             android:icon="@drawable/about"
-            android:title="About us"/>
+            android:title="About Us"/>
         <item android:id="@+id/nav_logout"
             android:icon="@drawable/logout_24dp"
-            android:title="logout"/>
-
-
-
-
+            android:title="Logout"/>
 </tools:menu>

@@ -1,5 +1,6 @@
 package org.docreg.app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -23,10 +25,10 @@ public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     @Override
     protected void onCreate (Bundle savedInstanceState) {
-        super .onCreate(savedInstanceState) ;
+        super.onCreate(savedInstanceState) ;
         setContentView(R.layout.home);
 
-        Toolbar toolbar = findViewById(R.id. toolbar_main ) ;
+        Toolbar toolbar = findViewById(R.id.toolbar_main ) ;
         setSupportActionBar(toolbar) ;
 
         DrawerLayout drawer = findViewById(R.id. drawer_layout ) ;
@@ -35,11 +37,12 @@ public class Home extends AppCompatActivity
                 R.string. navigation_drawer_close ) ;
         drawer.addDrawerListener(toggle) ;
         toggle.syncState() ;
-        NavigationView navigationView = findViewById(R.id. nav_view ) ;
-        navigationView.setNavigationItemSelectedListener( this ) ;
+        NavigationView navigationView = findViewById(R.id.nav_view) ;
+        navigationView.setNavigationItemSelectedListener(this) ;
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frag_container,new fronthome());
         fragmentTransaction.commit();
+
     }
     @Override
     public void onBackPressed () {
@@ -75,10 +78,27 @@ public class Home extends AppCompatActivity
         }
         else if(id == R.id.nav_logout)
         {
-            Auth auth = new Auth(this);
-            auth.removeUser();
-            Intent intent=new Intent(Home.this,Login_Activity.class);
-            startActivity(intent);
+            new AlertDialog.Builder(this)
+                    .setTitle("Logout")
+                    .setMessage("Are you sure you want to logout?")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Auth auth = new Auth(getApplicationContext());
+                            auth.removeUser();
+                            Intent intent=new Intent(Home.this,MainActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+
         }
         else if(id == R.id.nav_about)
         {
