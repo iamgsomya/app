@@ -1,15 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".docregister"    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="HealUP"
+            android:textColor="@color/color_head"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:id="@+id/H_up"/>
+
+    <ImageView
+        android:id="@+id/login_applogo"
+        android:layout_width="450dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="serif"
+            android:text="About Us"
+            android:textColor="@color/color_midblue"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:justificationMode="inter_word"
+            android:text="Welcome to HealUP!!! \n \nHealUP has been serving the health needs of India. \n \nHealUP is an online application dedicated to providing excellence in health care for infants, children and adolescents in a warm, friendly and comprehensive manner. It is our hope and intention that you receive high quality medical care in a personal setting and in an enjoyable manner.
+            \n \nOur goal is to provide you with the most positive and rewarding experience possible. Our application provides you a friendly interface wherein you can feel free to tell about your symptoms and expect timely and proper advice and medication from the specialists. We always want to see you getting back into the game living, working and playing pain free.
+            \n \nFor specialized care that can get you out of pain and back to your active life, look to HealUP. Here, a multidisciplinary team of experienced specialists offer you lasting solutions. Our compassionate, personalized care has helped so many people find relief. Now it can help you.
+            \n \nComplete care to relieve a variety of medical conditions. \n \nReal care you can trust."
+            android:textColor="@color/color_skyblue"
+            android:textSize="20dp"
+            android:textStyle="normal"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:text="Office Hours"
+        android:textColor="@color/color_midblue"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ABOUT US"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:justificationMode="inter_word"
+        android:text="Monday - Friday \n9 am - 9 pm \n \nEvery effort is always made to see the patients on the same day. We ask, however, that appointments for routine check-ups and physicals are made as much in advance as possible. For routine questions, chronic concerns, and medication refills, we ask that the patients call the office during regular hours."
+        android:textColor="@color/color_skyblue"
+        android:textSize="20dp"
+        android:textStyle="normal"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:text="After Hours"
+        android:textColor="@color/color_midblue"
         android:textSize="25dp"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_gravity="center"
-        android:fontFamily="monospace"
-        />
-</LinearLayout>
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:justificationMode="inter_word"
+        android:text="If there’s an emergency please call 108 or go to the nearest emergency room. One of our physicians is always on-call and is available for urgent conditions after-hours."
+        android:textColor="@color/color_skyblue"
+        android:textSize="20dp"
+        android:paddingBottom="20dp"
+        android:textStyle="normal"/>
+
+
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

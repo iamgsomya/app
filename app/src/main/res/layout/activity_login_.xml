@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login_Activity"
-    android:background="@drawable/login">
+    android:background="@color/cardview_light_background">
+
     <ImageView
         android:id="@+id/login_applogo"
-        android:layout_width="350dp"
+        android:layout_width="450dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        />
+        android:src="@drawable/logo" />
+
     <EditText
         android:id="@+id/login_userid_input"
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
         android:layout_marginRight="30dp"
         android:hint="User_id"
         android:inputType="text"
-        android:textColor="@color/color_midblue"
-        android:textColorHint="@color/color_midblue"
+        android:textColor="@color/color_skyblue"
+        android:textColorHint="@color/color_skyblue"
         android:textSize="17sp"
         android:textStyle="bold"
         />
@@ -40,10 +40,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="6dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="text"
-        android:textColor="@color/color_midblue"
-        android:textColorHint="@color/color_midblue"
+        android:textColor="@color/color_skyblue"
+        android:textColorHint="@color/color_skyblue"
         android:textSize="17sp"
         android:textStyle="bold"
         />
