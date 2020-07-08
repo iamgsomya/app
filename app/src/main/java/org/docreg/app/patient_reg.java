@@ -35,7 +35,8 @@ import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-public class patient_reg extends AppCompatActivity {
+public class patient_reg extends AppCompatActivity
+{
     private EditText patientname,aadharno,age,address,phone,height,weight;
     private Button regButton;
     Spinner genderSpin,bloodGroupSpin;

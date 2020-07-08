@@ -28,7 +28,8 @@ public class Home extends AppCompatActivity
         super.onCreate(savedInstanceState) ;
         setContentView(R.layout.home);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_main ) ;
+        Toolbar toolbar = findViewById(R.id.toolbar_main) ;
+
         setSupportActionBar(toolbar) ;
 
         DrawerLayout drawer = findViewById(R.id. drawer_layout ) ;
