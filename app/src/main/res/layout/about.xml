@@ -13,18 +13,7 @@
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="HealUP"
-            android:textColor="@color/color_head"
-            android:textSize="35dp"
-            android:textStyle="bold"
-            android:id="@+id/H_up"/>
+
 
     <ImageView
         android:id="@+id/login_applogo"

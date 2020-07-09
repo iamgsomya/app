@@ -1,8 +1,8 @@
 package org.docreg.app;
 
 public class Constants {
-    static String prefix = "http://192.168.137.39";
-//    static String prefix = "https://ep2.virtualmist.com";
+  //  static String prefix = "http://192.168.137.39";
+    static String prefix = "https://ep2.virtualmist.com";
     static String loginUrl = prefix + "/user-login";
     static String registerPatientUrl = prefix + "/register-patient";
     static String docRegisterUrl = prefix + "/register-doctor";

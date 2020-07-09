@@ -55,12 +55,8 @@ public class Home extends AppCompatActivity
             super .onBackPressed() ;
         }
     }
-    @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer_menu, menu) ;
-        return true;
-    }
+
+
 
     @SuppressWarnings ( "StatementWithEmptyBody" )
     @Override
