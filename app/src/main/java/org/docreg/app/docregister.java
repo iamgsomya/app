@@ -1,6 +1,7 @@
 package org.docreg.app;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +32,16 @@ public class docregister extends Fragment {
     private Button RegisterButton;
     RequestQueue queue;
     Auth auth;
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(getContext(), "landscape", Toast.LENGTH_SHORT).show();
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            Toast.makeText(getContext(), "portrait", Toast.LENGTH_SHORT).show();
+        }
+    }
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_docregister, container, false);
         InputdocId=view.findViewById(R.id.Doc_id);
