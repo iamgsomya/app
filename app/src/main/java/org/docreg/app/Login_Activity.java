@@ -109,7 +109,7 @@ public class Login_Activity extends AppCompatActivity {
                     }
                 };
                 queue.add(postRequest);
-               loginUser();
+               //loginUser();
 
             }
         });
