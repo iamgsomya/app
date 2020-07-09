@@ -30,6 +30,7 @@ public class Home extends AppCompatActivity
 
         Toolbar toolbar = findViewById(R.id.toolbar_main ) ;
         setSupportActionBar(toolbar) ;
+        toolbar.setTitle("Heal Up");
 
         DrawerLayout drawer = findViewById(R.id. drawer_layout ) ;
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
