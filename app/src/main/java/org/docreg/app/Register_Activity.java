@@ -37,10 +37,6 @@ public class Register_Activity extends AppCompatActivity {
         InputPassword=findViewById(R.id.UserPassword_input);
         InputEmail=findViewById(R.id.Useremail_input);
         InputState=findViewById(R.id.Userstate_input);
-
-
-
-
         InputPhone=findViewById(R.id.Userphone_input);
         InputCity=findViewById(R.id.Usercity_input);
         RegisterButton=findViewById(R.id.Register_btn);
