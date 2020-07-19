@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appointment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bd_card"
+            android:orientation="vertical"
+            android:padding="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/Appointment_scr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Appointment"
+                android:textColor="@color/color_head"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TUser_id"
+                android:layout_below="@+id/Appointment_scr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/user_id"
+                android:textColor="@color/color_skyblue"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/User_id"
+                android:layout_below="@id/Appointment_scr"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bgedittext"
+                android:ems="10"
+                android:paddingHorizontal="40dp"
+                android:textColorHint="@color/hint_color"
+                android:singleLine="true"
+                android:inputType="text"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="italic"
+                android:hint="Enter User Id"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/Tdoc_id_input"
+                android:layout_below="@+id/TUser_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/doc_id"
+                android:textColor="@color/color_skyblue"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/doc_id_input"
+                android:layout_below="@id/TUser_id"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bgedittext"
+                android:ems="10"
+                android:singleLine="true"
+                android:paddingHorizontal="40dp"
+                android:textColorHint="@color/hint_color"
+                android:hint="Enter valid doctor id"
+                android:inputType="text"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="italic"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/TPatient_id_input"
+                android:layout_below="@+id/Tdoc_id_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Patient_Id"
+                android:textColor="@color/color_skyblue"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Patient_id_input"
+                android:layout_below="@id/Tdoc_id_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bgedittext"
+                android:ems="10"
+                android:singleLine="true"
+                android:paddingHorizontal="40dp"
+                android:textColorHint="@color/hint_color"
+                android:hint="Enter Valid Patient Id"
+                android:inputType="textPassword"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="italic"
+                android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/TProblem_input"
+                android:layout_below="@+id/TPatient_id_input"
+                android:text="Problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/color_skyblue"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Problem_input"
+                android:layout_below="@id/TPatient_id_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bgedittext"
+                android:ems="10"
+                android:singleLine="true"
+                android:paddingHorizontal="40dp"
+                android:textColorHint="@color/hint_color"
+                android:hint="Problem"
+                android:inputType="text"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/TType_input"
+                android:layout_below="@+id/TProblem_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Type"
+                android:textColor="@color/color_skyblue"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/Type_input"
+                android:layout_below="@id/TProblem_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bgedittext"
+                android:ems="10"
+                android:singleLine="true"
+                android:paddingHorizontal="40dp"
+                android:textColorHint="@color/hint_color"
+                android:hint="Type"
+                android:inputType="text"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="italic"
+                android:importantForAutofill="no" />
+
+
+
+
+            <Button
+                android:id="@+id/Appointment_btn"
+                android:layout_below="@id/TUserstate_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_btn"
+                android:text="Appointment Done"
+                android:textStyle="bold"
+                android:textColor="@color/color_midblue"
+                android:textSize="18sp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

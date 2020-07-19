@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PatientDetailsScreen"></activity>
+        <activity android:name=".appointment"></activity>
+        <activity android:name=".PatientDetailsScreen" />
         <activity android:name=".FetchPatientScreen" />
         <activity android:name=".patient_reg" />
         <activity android:name=".Register_Activity" />
