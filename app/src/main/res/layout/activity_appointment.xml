@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/bg_btn"
-                android:text="Appointment Done"
+                android:text="Appointment"
                 android:textStyle="bold"
                 android:textColor="@color/color_midblue"
                 android:textSize="18sp"
