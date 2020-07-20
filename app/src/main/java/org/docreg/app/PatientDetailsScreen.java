@@ -1,22 +1,29 @@
 package org.docreg.app;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
 public class PatientDetailsScreen extends AppCompatActivity {
-    String name,image,aadhar,gender,address, phone,bloodGroup;
+    String name,image,aadhar,gender,address, phone,bloodGroup, patientId;
     int age;
     double height, weight;
     TextView tvName, tvAadhar, tvGender, tvAddress, tvPhone, tvBloodGroup, tvAge, tvHeight, tvWeight;
     ImageView imageView;
     Toolbar toolbar;
+    Button appointment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +33,7 @@ public class PatientDetailsScreen extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent oi = getIntent();
         name = oi.getStringExtra("name");
+        patientId=oi.getStringExtra("patientId");
         aadhar = oi.getStringExtra("aadhar");
         age = oi.getIntExtra("age",-1);
         gender = oi.getStringExtra("gender");
@@ -57,5 +65,19 @@ public class PatientDetailsScreen extends AppCompatActivity {
         tvHeight.setText(height!=-1?String.valueOf(height):"-");
         tvWeight.setText(weight!=-1?String.valueOf(weight):"-");
         Picasso.get().load(image).into(imageView);
+
+
+    }
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_fronthome, container, false);
+        appointment = view.findViewById(R.id.appointment);
+        appointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(PatientDetailsScreen.this, appointment.class);
+                startActivity(i);
+            }
+        });
+    return view;
     }
 }

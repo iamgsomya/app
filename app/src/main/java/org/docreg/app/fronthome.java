@@ -30,7 +30,7 @@ import static android.app.Activity.RESULT_OK;
 public class fronthome extends Fragment {
  Button reg_paitent;
  Button fetch_patient;
- Button appointment;
+
 
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fronthome, container, false);
@@ -50,14 +50,7 @@ public class fronthome extends Fragment {
         startActivity(i);
             }
         });
-        appointment = view.findViewById(R.id.appointment);
-        appointment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getContext(), appointment.class);
-                startActivity(i);
-            }
-        });
+
 
         return view;
     }

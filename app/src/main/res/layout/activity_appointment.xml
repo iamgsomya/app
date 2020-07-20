@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="@string/doc_id"
+                android:text="@string/doctor"
                 android:textColor="@color/color_skyblue"
                 android:textStyle="normal"
                 android:fontFamily="sans-serif-condensed-medium"
@@ -141,34 +141,6 @@
                 android:fontFamily="sans-serif-thin"
                 android:textStyle="italic"/>
 
-            <TextView
-                android:id="@+id/TType_input"
-                android:layout_below="@+id/TProblem_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Type"
-                android:textColor="@color/color_skyblue"
-                android:textStyle="normal"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textSize="20sp" />
-
-
-            <EditText
-                android:id="@+id/Type_input"
-                android:layout_below="@id/TProblem_input"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@drawable/bgedittext"
-                android:ems="10"
-                android:singleLine="true"
-                android:paddingHorizontal="40dp"
-                android:textColorHint="@color/hint_color"
-                android:hint="Type"
-                android:inputType="text"
-                android:fontFamily="sans-serif-thin"
-                android:textStyle="italic"
-                android:importantForAutofill="no" />
 
 
 

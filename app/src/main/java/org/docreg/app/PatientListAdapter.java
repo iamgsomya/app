@@ -41,6 +41,7 @@ class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.ViewHol
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context.getApplicationContext(),PatientDetailsScreen.class);
+                i.putExtra("patientId",patientModel.getId());
                 i.putExtra("name",patientModel.getName());
                 i.putExtra("aadhar",patientModel.getAadhar());
                 i.putExtra("age",patientModel.getAge());

@@ -8,12 +8,13 @@
     <string name="email">email</string>
     <string name="password" />
     <string name="doctor_registration">Doctor Registration</string>
-    <string name="doctor_name">Doctor_name</string>
+    <string name="doctor_name">Doctor name</string>
     <string name="_92200000">92200000</string>
     <string name="doc_123">doc_123</string>
-    <string name="clinc_name">clinc_name</string>
+    <string name="clinc_name">clinic_name</string>
     <string name="block_c_jda">Block C, JDA</string>
     <string name="doc_id">Doc_Id</string>
+    <string name="doctor">Doctor</string>
     <string name="specialization">Specialization</string>
     <string name="john_marques">John Marques</string>
     <string name="register">Register</string>
@@ -31,7 +32,7 @@
     <string name="patient_registration">Patient Registration</string>
     <string name="patient_name">Patient Name</string>
     <string name="registration">Registration</string>
-    <string name="user_id">User_Id</string>
+    <string name="user_id">User Id</string>
     <string name="phone_no">Phone No.</string>
     <string name="state">State</string>
     <string name="city">City</string>
@@ -40,7 +41,7 @@
     <string name="jaipur">jaipur</string>
     <string name="john123">john123</string>
     <string name="pass">Password</string>
-    <string name="user_name">User_name</string>
+    <string name="user_name">User name</string>
     <string-array name="gender">
         <item>female</item>
         <item>male</item>
