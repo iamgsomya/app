@@ -23,7 +23,7 @@ public class PatientDetailsScreen extends AppCompatActivity {
     TextView tvName, tvAadhar, tvGender, tvAddress, tvPhone, tvBloodGroup, tvAge, tvHeight, tvWeight;
     ImageView imageView;
     Toolbar toolbar;
-    Button appointment;
+    Button appointment, viewAppointment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,7 @@ public class PatientDetailsScreen extends AppCompatActivity {
         bloodGroup = oi.getStringExtra("bloodGroup");
         image = oi.getStringExtra("imageUrl");
 
+        viewAppointment = findViewById(R.id.view_appointments);
         tvName = findViewById(R.id.pdname);
         tvAadhar = findViewById(R.id.pdaadhar);
         tvGender = findViewById(R.id.pdgender);
@@ -66,7 +67,14 @@ public class PatientDetailsScreen extends AppCompatActivity {
         tvWeight.setText(weight!=-1?String.valueOf(weight):"-");
         Picasso.get().load(image).into(imageView);
 
-
+        viewAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), AppointmentsListScreen.class);
+                i.putExtra("patientId",patientId);
+                startActivity(i);
+            }
+        });
     }
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fronthome, container, false);

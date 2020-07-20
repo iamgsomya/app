@@ -237,8 +237,20 @@
                 android:layout_marginRight="30dp"
                 android:background="@drawable/buttons"
                 android:padding="15dp"
-                android:text="Appointment"
+                android:text="Book Appointment"
                 android:textColor="@color/color_midblue"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/view_appointments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/buttons"
+                android:padding="15dp"
+                android:text="View Appointment"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textSize="18sp" />
 
         </LinearLayout>
