@@ -71,21 +71,14 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/doc_id_input"
-                android:layout_below="@id/TUser_id"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@drawable/bgedittext"
-                android:ems="10"
-                android:singleLine="true"
-                android:paddingHorizontal="40dp"
-                android:textColorHint="@color/hint_color"
-                android:hint="Enter valid doctor id"
-                android:inputType="text"
-                android:fontFamily="sans-serif-thin"
-                android:textStyle="italic"
-                android:importantForAutofill="no" />
+
+            <Spinner
+            android:id="@+id/Doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+
+
 
             <TextView
                 android:id="@+id/TPatient_id_input"
@@ -93,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Patient_Id"
+                android:text="Patient Id"
                 android:textColor="@color/color_skyblue"
                 android:textStyle="normal"
                 android:fontFamily="sans-serif-condensed-medium"
@@ -140,6 +133,24 @@
                 android:inputType="text"
                 android:fontFamily="sans-serif-thin"
                 android:textStyle="italic"/>
+            <TextView
+                android:id="@+id/TDate_input"
+                android:layout_below="@+id/TProblem_input"
+                android:text="Problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/color_skyblue"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp" />
+            <DatePicker
+            android:id="@+id/datePicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            />
 
 
 
@@ -159,6 +170,7 @@
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
                 android:textAllCaps="false"/>
+
 
 
         </LinearLayout>
