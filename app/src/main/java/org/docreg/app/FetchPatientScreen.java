@@ -119,12 +119,12 @@ public class FetchPatientScreen extends AppCompatActivity {
                             return;
                         }
                         progressLayout.setVisibility(View.GONE);
-                        errorTv.setVisibility(View.VISIBLE);
+                        noMatchTv.setVisibility(View.VISIBLE);
                     } catch (JSONException e) {
                         Toast.makeText(FetchPatientScreen.this, "Unexpected Response", Toast.LENGTH_SHORT).show();
                         e.printStackTrace();
                         progressLayout.setVisibility(View.GONE);
-                        errorTv.setVisibility(View.VISIBLE);
+                        noMatchTv.setVisibility(View.VISIBLE);
                     }
                 }
             }, new Response.ErrorListener() {
