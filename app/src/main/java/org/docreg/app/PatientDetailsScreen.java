@@ -2,12 +2,14 @@ package org.docreg.app;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import java.util.Objects;
 
 public class PatientDetailsScreen extends AppCompatActivity {
     String name,image,aadhar,gender,address, phone,bloodGroup, patientId;
@@ -30,7 +34,9 @@ public class PatientDetailsScreen extends AppCompatActivity {
         setContentView(R.layout.activity_patient_details_screen);
         toolbar = findViewById(R.id.pds_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+
         Intent oi = getIntent();
         name = oi.getStringExtra("name");
         patientId=oi.getStringExtra("patientId");
@@ -76,16 +82,14 @@ public class PatientDetailsScreen extends AppCompatActivity {
             }
         });
     }
-    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fronthome, container, false);
-        appointment = view.findViewById(R.id.appointment);
-        appointment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(PatientDetailsScreen.this, appointment.class);
-                startActivity(i);
-            }
-        });
-    return view;
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
